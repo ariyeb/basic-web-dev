@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    /* margin: 0;
+    padding: 0; */
+}
+
+body {
+    margin: 0;
+}
+
+
+.inline-block {
+    display: inline-block;
+    width: 100px;
+}
+
+.block {
+    display: block;
+}
+
+.none-visability {
+    visibility: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+.width-height {
+    width: 500px;
+    height: 200px;
+    background: blue;
+}
+
+.box2 {
+    background: chartreuse;
+    height: 100%;
+    width: 50%;
+}
+
+.box3 {
+    width: 50%;
+    height: 250px;
+    background: crimson;
+}
+
+img {
+    display: block;
+    min-width: 600px;
+}
+
+.div-p {
+    width: 400px;
+    min-height: 200px;
+}
+
+.box4 {
+    background: green;
+    width: 50vw;
+    height: 25vh;
+}
+
+.box5 {
+    width: calc(50vw - 100px);
+    height: 400px;
+    padding: 20px;
+    margin: 30px auto;
+    /* margin-top: 40px;
+    padding-left: 35px; */
+    background: blue;
+    box-sizing: border-box;
+}
+
+.box6 {
+    width: 100%;
+    height: 100%;
+    background: cadetblue;
+    box-sizing: border-box;
+    border: 5px solid yellow;
+    /* border-style: dotted; */
+}
+
+.box7 {
+    margin: 30px;
+    width: 25vw;
+    height: 25vw;
+    border: 5px solid blue;
+    border-radius: 50%;
+}
+
+button {
+    display: block;
+    padding: 5px;
+    background: blue;
+    color: white;
+    border: none;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+button:hover,
+button:focus {
+    background: white;
+    color: blue;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+input {
+    display: block;
+    padding: 5px;
+    width: 100%;
+}
+
+input:focus {
+    border: 1px solid green;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+a:visited {
+    color: greenyellow;
+}

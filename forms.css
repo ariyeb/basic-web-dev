@@ -1,0 +1,21 @@
+input {
+    display: block;
+    padding: 5px;
+    margin: 10px;
+}
+
+label {
+    margin: 10px;
+}
+
+button {
+    display: block;
+}
+
+.form-stam {
+    margin: 10px;
+}
+
+.inline-block {
+    display: inline-block;
+}

@@ -1,0 +1,45 @@
+h1 {
+    color: blueviolet;
+}
+
+p {
+    width: 250px;
+}
+
+/* #p1 {
+    width: 400px;
+}
+
+.my-p {
+    width: 100px;
+    width: 600px;
+}
+
+.my-p2 {
+    background: green;
+} */
+
+.my-div {
+    background: #ccc;
+}
+
+.my-div a {
+    color: indigo;
+}
+
+.my-div>p {
+    color: lawngreen;
+}
+
+/* p+p {
+    background: red;
+} */
+
+/* h1~p {
+    background: red;
+} */
+
+h1,
+p {
+    background: blue;
+}
