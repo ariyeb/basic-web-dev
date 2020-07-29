@@ -1,0 +1,62 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    background: blue;
+}
+
+.header__nav {
+    width: 70%;
+    margin: 0 auto;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.header__nav__home {
+    margin-right: calc(100% - 100px);
+}
+
+.article {
+    width: 70%;
+    min-height: calc(100vh - 4rem);
+    margin: 0 auto;
+
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer {
+    width: 100%;
+    background: blue;
+}
+
+.footer__nav {
+    margin: 0 auto;
+    width: 30%;
+}
+
+.footer a {
+    margin: 1rem 1rem;
+}

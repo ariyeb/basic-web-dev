@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    padding: 10px;
+}
+
+.static {
+    width: 150px;
+    height: 1500px;
+    margin: 20px;
+    position: static;
+    background: yellow;
+}
+
+.relative {
+    width: 200px;
+    height: 200px;
+    background: purple;
+    margin: 20px;
+    position: relative;
+    top: 100px;
+    float: right;
+}
+
+.absulote {
+    width: 100px;
+    height: 40px;
+    background: red;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.fixed {
+    position: fixed;
+    width: 150px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+    background: green;
+    z-index: -1;
+}
