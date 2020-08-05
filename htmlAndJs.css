@@ -1,0 +1,23 @@
+input {
+    display: block;
+    margin: 1rem;
+}
+
+button {
+    display: block;
+    margin: 1rem;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+
+.red {
+    background: red;
+}
+
+.yellow {
+    background: yellow;
+}
