@@ -50,6 +50,67 @@ redbox.classList.remove('red')
 redbox.classList.add('yellow')
 
 // צרו לוח שחמט-דמקה באופן פרוגרמבילי -
+const board = document.getElementById('board')
 
+for (let y = 0; y < 8; y++) {
+    for (let x = 0; x < 8; x++) {
+        const square = document.createElement('div')
 
+        if (y % 2 === 0) {
+            square.className = x % 2 === 0 ? 'white' : 'black'
+        } else {
+            square.className = x % 2 === 0 ? 'black' : 'white'
+        }
 
+        board.appendChild(square)
+    }
+}
+
+// selectors
+
+const squares = document.getElementsByClassName('square')
+for (let square of squares) {
+    square.style.border = '5px solid yellow'
+}
+
+const paragraphes2 = document.getElementsByTagName('p')
+for (let p of paragraphes2) {
+    p.style.color = 'green'
+}
+
+const hollowSquares = document.querySelectorAll('.hollow')
+for (let square of hollowSquares) {
+    square.style.width = '70px'
+    square.style.height = '70px'
+    square.style.border = '5px solid black'
+    square.style.margin = '5px'
+}
+
+const firstHollowSquare = document.querySelector('.hollow')
+firstHollowSquare.style.background = 'yellow'
+
+// צרו שני דיוים עם מחלקה של ריבוע ירוק
+// כאשר לוחצים על אחד מהם הרקע נהפך לצהוב
+
+const greenBoxes = document.getElementsByClassName('box green')
+for (let box of greenBoxes) {
+    box.addEventListener('click', () => {
+        box.classList.remove('green')
+        box.classList.add('yellow')
+    })
+}
+
+const divChildrenEx = document.getElementById('divChildrenEx')
+divChildrenEx.children[0].className = 'red'
+
+// צרו דיו עם שלושה עיגולים בצבע כחול שמוצגים בשורה
+// כאשר לוחצים על אחד העיגולים הוא נעלם
+// יש להתשמש בשדה
+// children
+
+const circlesContainer = document.getElementById('circles-container')
+for (let child of circlesContainer.children) {
+    child.addEventListener('click', () => {
+        circlesContainer.removeChild(child)
+    })
+}

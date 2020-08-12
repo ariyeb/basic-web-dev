@@ -708,12 +708,14 @@ myArr = [
 const func = (students) => {
     let result = []
     students.forEach((student) => {
-        if (student.age < 35) {
+        if  (student.age < 35) {
             result.push(student)
         }
     });
     return result
 }
+
+console.log( 'he')
 
 console.log(func(myArr))
 
