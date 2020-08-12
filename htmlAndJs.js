@@ -108,9 +108,147 @@ divChildrenEx.children[0].className = 'red'
 // יש להתשמש בשדה
 // children
 
-const circlesContainer = document.getElementById('circles-container')
-for (let child of circlesContainer.children) {
-    child.addEventListener('click', () => {
-        circlesContainer.removeChild(child)
+// const circlesContainer = document.getElementById('circles-container')
+// for (let child of circlesContainer.children) {
+//     child.addEventListener('click', () => {
+//         circlesContainer.removeChild(child)
+//     })
+// }
+
+// אותו תרגיל - אסור להשתמש ב
+// children
+// אסור להוציא את האלמנט של הקונטיינר ל
+// js
+// רק לחיצה על אחד משלושת העיגולים גורמת להם להימחק
+
+const circles = document.querySelectorAll('#circles-container div')
+for (let circle of circles) {
+    circle.addEventListener('click', () => {
+        circle.className = "none"
     })
 }
+
+// input event
+const h4InputEvent = document.querySelector('#input-event h4')
+const inputInputEvent = document.querySelector('#input-event input')
+inputInputEvent.addEventListener('input', (event) => {
+    // console.log(event)
+    h4InputEvent.innerHTML = event.target.value
+})
+
+// Keyup
+const h4KwyupEvent = document.querySelector('#keyup-event h4')
+const inputKeyupEvent = document.querySelector('#keyup-event input')
+inputKeyupEvent.addEventListener('keyup', (event) => {
+    // console.log(event)
+    // כאשר מקישים אנטר הכותרת מתעדכנת לערך של האינפוט
+    if (event.code === 'Enter') {
+        h4KwyupEvent.innerHTML = event.target.value
+        event.target.value = ""
+    }
+})
+
+// תרגיל צרו אינפוט שהרקע משתנה לפי אורך הטקסט
+// לפי השארית של חלוקה לשלוש
+// שארית 0 רקע אדום
+// שארית 1 רקע כחול
+// שארית 2 אין רקע
+
+document.getElementById('changing-color-input')
+    .addEventListener('input', (event) => {
+        switch (event.target.value.length % 3) {
+            case 0:
+                event.target.className = 'red'
+                break;
+            case 1:
+                event.target.className = 'blue'
+                break;
+            case 2:
+                event.target.className = ''
+                break;
+        }
+    });
+// blur focus
+const inputBlurFocus = document.getElementById('input-blur-focus')
+inputBlurFocus.addEventListener('focus', () => {
+    // inputBlurFocus.className = "input-focus"
+    inputBlurFocus.classList.add('input-focus')
+})
+inputBlurFocus.addEventListener('blur', () => {
+    inputBlurFocus.classList.remove('input-focus')
+})
+
+// mouse events
+const divMouseEvents = document.getElementById('mouse-events')
+// divMouseEvents.addEventListener('mouseenter', () => {
+//     divMouseEvents.classList.remove('blue')
+//     divMouseEvents.classList.add('red')
+// })
+
+// divMouseEvents.addEventListener('mouseleave', () => {
+//     divMouseEvents.classList.remove('red')
+//     divMouseEvents.classList.add('blue')
+// })
+
+// mousemove
+
+// השתמשו באיוונט של
+// mousemove
+// ולפי המיקום של העכבר בתוך הדיו של
+// mouse - events
+// תקבעו את הרקע של הדיו
+// לפי המיקום של העכבר בחלוקה לארבעה רבעים
+// ובהתאם לכך בארבעה צבעים
+
+divMouseEvents.addEventListener('mousemove', (event) => {
+    const x = event.offsetX
+    const y = event.offsetY
+
+    if (x < 151) {
+        divMouseEvents.className = y < 151 ? 'mouse-events red' : 'mouse-events blue'
+    } else {
+        divMouseEvents.className = y < 151 ? 'mouse-events yellow' : 'mouse-events green'
+    }
+})
+
+// bubbling
+
+const divBubblingEx = document.getElementById('bubbling-ex')
+const buttonBubblingEx = document.querySelector('#bubbling-ex button')
+buttonBubblingEx.addEventListener('click', (event) => {
+    event.stopPropagation()
+    divBubblingEx.className = 'bubbling-ex yellow'
+})
+
+divBubblingEx.addEventListener('click', () => {
+    setTimeout(() => {
+        divBubblingEx.className = 'bubbling-ex blue'
+    }, 1500)
+})
+
+// צרו כפתור שמקפיץ מודל למרכז המסך
+// בתוך המודל יש כפתור לסגור את המודל
+// כאשר לוחצים על הכפתור או על הרקע המודל נסגר
+// אבל כאשר לוחצים על גוף המודל הוא לא נסגר
+// המודל צריך להיות במרכז המסך באופן קבוע גם כאשר מזיזים את העמוד למעלה ולמטה
+
+const modal = document.getElementById('modal')
+const modalBox = document.getElementById('modal-box')
+const buttonCloseModal = document.getElementById('button-close-modal')
+const buttonOpenModal = document.getElementById('button-open-modal')
+
+buttonOpenModal.addEventListener('click', () => {
+    modal.className = 'modal'
+})
+
+modal.addEventListener('click', () => {
+    modal.className = 'none'
+})
+
+buttonCloseModal.addEventListener('click', () => {
+    modal.className = 'none'
+})
+
+modalBox.addEventListener('click', (event) => {
+    event.stopPropagation()
+})
